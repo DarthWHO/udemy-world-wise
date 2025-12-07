@@ -1,9 +1,12 @@
 import styles from "../styles/CountryItem.module.css";
+import Flag from "./Flag";
 
 function CountryItem({ country }) {
   return (
     <li className={styles.countryItem}>
-      <span>{country.emoji}</span>
+      <span>
+        <Flag flag={country.emoji} />
+      </span>
       <span>{country.country}</span>
     </li>
   );
