@@ -15,6 +15,13 @@
   position: relative;
 }
 
+.error {
+  color: var(--color-error);
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
 .buttons {
   display: flex;
   justify-content: space-between;
