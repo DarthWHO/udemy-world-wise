@@ -1,6 +1,8 @@
 import styles from "../styles/Login.module.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import Button from "../components/Button";
 import PageNav from "../components/PageNav";
 import { useAuth } from "../hooks/useAuth";
 
@@ -13,13 +15,13 @@ export default function Login() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/app");
+      navigate("/app", { replace: true });
     }
   }, [isAuthenticated, navigate]);
 
   function handleLogin(e) {
     e.preventDefault();
-    login(email, password);
+    if (email && password) login(email, password);
   }
 
   return (
@@ -47,7 +49,7 @@ export default function Login() {
         </div>
 
         <div>
-          <button>Login</button>
+          <Button type="primary">LogIn</Button>
         </div>
       </form>
     </main>
