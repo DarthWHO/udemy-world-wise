@@ -47,6 +47,7 @@ function Map() {
       </Button>
       <MapContainer
         center={mapPosition}
+        worldCopyJump={true}
         zoom={10}
         scrollWheelZoom={true}
         className={styles.map}
